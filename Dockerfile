@@ -1,14 +1,11 @@
 # Use official Python image
-FROM python:3.10
+FROM python:3.10-slim
 
 # Set working directory inside the container
 WORKDIR /app
 
-# Copy all files into the container
-COPY . .
+# Copy app.py from host to container
+COPY app.py .
 
-# Install Python dependencies (ignore errors if empty)
-RUN pip install -r requirements.txt || true
-
-# Run the Python script
+# Run the Python app
 CMD ["python", "app.py"]
