@@ -10,3 +10,19 @@ COPY . .
 EXPOSE 5000
 
 CMD ["python", "app.py"]
+
+
+
+
+#--change the code 
+
+
+# FROM python:3.10
+
+# WORKDIR /app
+
+# COPY app.py .
+
+# RUN pip install flask bugsnag
+
+# CMD ["python", "app.py"]

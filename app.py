@@ -121,3 +121,35 @@ def delete(index):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
+
+# from flask import Flask, jsonify
+# import bugsnag
+# from bugsnag.flask import handle_exceptions
+
+# # Configure Bugsnag
+# bugsnag.configure(
+#     api_key="a8e5e961c365880e96b5145b2978526f",
+#     project_root="."
+# )
+
+# app = Flask(__name__)
+# handle_exceptions(app)
+
+# # Sample tasks list
+# tasks = ["Sample Task 1", "Sample Task 2"]
+
+# @app.route("/")
+# def index():
+#     return "Todo App is live!"
+
+# @app.route("/tasks")
+# def get_tasks():
+#     return jsonify({"tasks": tasks})
+
+# @app.route("/error")
+# def trigger_error():
+#     raise Exception("This is a test error for Bugsnag!")
+
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0", port=5000, debug=True)
